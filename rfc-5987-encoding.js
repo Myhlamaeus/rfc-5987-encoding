@@ -1,11 +1,20 @@
-export var defaultLang = 'en-US'
+export function encode (str) {
+  let lang = encode.defaultLang
+  if (typeof str === 'object') {
+    lang = str.lang
+    str = str.str
+  }
 
-export function encode ({str, lang = defaultLang}) {
   return `UTF-8'${lang}'` + encodeURIComponent(str)
-    .replace(/['()]/g, escape)
+    .replace(/['()]/g, function (match) {
+      return '%' + match.charCodeAt(0).toString(16)
+    })
     .replace(/\*/g, '%2A')
-    .replace(/%(?:7C|60|5E)/g, unescape)
+    .replace(/%(7C|60|5E)/g, function (_, match) {
+      return String.fromCharCode(parseInt(match, 16))
+    })
 }
+encode.defaultLang = 'en-US'
 
 export function decode (str) {
   const parts = str.split('\'')
