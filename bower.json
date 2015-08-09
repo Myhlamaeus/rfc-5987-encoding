@@ -1,7 +1,7 @@
 {
   "name": "rfc-5987-encoding",
   "description": "Encoding as per RFC 5987",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
     "Malte-Maurice Dreyer <dreyer.maltem+dev@gmail.com>"
   ],
