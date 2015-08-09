@@ -1,0 +1,35 @@
+{
+  "name": "rfc-5987-encoding",
+  "description": "Encoding as per RFC 5987",
+  "version": "0.0.0",
+  "authors": [
+    "Malte-Maurice Dreyer <dreyer.maltem+dev@gmail.com>"
+  ],
+  "homepage": "https://github.com/ileri/rfc-5987-encoding",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "dist",
+    "maps"
+  ],
+  "keywords": [
+    "rfc",
+    "rfc 5987",
+    "rfc5987",
+    "encoding",
+    "http",
+    "headers"
+  ],
+  "license": "MIT",
+  "main": "rfc-5987-encoding.js",
+  "moduleType": [
+    "es6"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ileri/rfc-5987-encoding.git"
+  }
+}

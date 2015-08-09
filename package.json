@@ -1,0 +1,37 @@
+{
+  "name": "rfc-5987-encoding",
+  "description": "Encoding as per RFC 5987",
+  "version": "0.0.0",
+  "author": "Malte-Maurice Dreyer <dreyer.maltem+dev@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/ileri/rfc-5987-encoding/issues"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-sourcemaps": "^1.5.2"
+  },
+  "homepage": "https://github.com/ileri/rfc-5987-encoding",
+  "keywords": [
+    "encoding",
+    "headers",
+    "http",
+    "rfc",
+    "rfc 5987",
+    "rfc5987"
+  ],
+  "license": "MIT",
+  "main": "dist/rfc-5987-encoding.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ileri/rfc-5987-encoding.git"
+  },
+  "scripts": {
+    "babel-node": "babel-node --stage 0",
+    "nodemon": "nodemon --exec npm run babel-node -- rfc-5987-encoding.js",
+    "prepublish": "gulp build",
+    "start": "babel-node rfc-5987-encoding.js",
+    "test": "standard {test/,lib/,./}*.js"
+  }
+}
